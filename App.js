@@ -3,11 +3,15 @@ import { StyleSheet, Text, View, TextInput, Button, FlatList } from 'react-nativ
 import { Picker } from '@react-native-picker/picker';
 
 export default function HomeScreen() {
+  // State variables to manage form inputs and the menu list
+
+
   const [menu, setMenu] = useState([]);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [course, setCourse] = useState('');
   const [price, setPrice] = useState('');
+// Adds a new dish to the menu if all fields are filled
 
   const handleAddDish = () => {
     if (name && description && course && price) {
@@ -74,6 +78,8 @@ export default function HomeScreen() {
     </View>
   );
 }
+// Basic styling for layout and components
+
 
 const styles = StyleSheet.create({
   container: { padding: 20 },
